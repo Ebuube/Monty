@@ -38,8 +38,8 @@ int main(UNUSED int argc, UNUSED char *argv[])
 				cp_filename, (void *)fp_file);
 		exit(EXIT_FAILURE);
 	}
-
-	free_stack(&stack);
+	if (stack != NULL)
+		free_stack(&stack);
 
 	return (0);
 }
