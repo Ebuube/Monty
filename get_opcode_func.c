@@ -19,6 +19,7 @@ opcode_func *get_opcode_func(void)
 		{"nop", _nop},
 		{"sub", _sub},
 		{"div", _div},
+		{"mul", _mul},
 		{NULL, NULL}
 	};
 

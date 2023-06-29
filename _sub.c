@@ -3,7 +3,7 @@
 /**
  * _sub - subtract the top element of the stack from the second top element
  * @stack: address of the pointer to the stack
- * @line_nubmer: line number being executed
+ * @line_number: line number being executed
  *
  * Description: The result is stored in the second top element of the stack
  * and the top element is removed making the stack one element shorter
