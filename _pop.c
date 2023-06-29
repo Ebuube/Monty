@@ -16,14 +16,12 @@ void _pop(stack_t **stack, unsigned int line_number)
 	{
 		fprintf(stderr, "L%u: _pall: NULL passed as stack\n",
 			line_number);
-		free_stack(stack);
 		exit(EXIT_FAILURE);
 	}
 	if ((*stack) == NULL)
 	{/* Empty stack */
 		fprintf(stderr, "L%u: can't pop an empty stack\n",
 			line_number);
-		free_stack(stack);
 		exit(EXIT_FAILURE);
 	}
 

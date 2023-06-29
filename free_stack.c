@@ -4,7 +4,6 @@
  * free_stack - free a stack list
  * @stack: address of pointer to stack
  *
- * Description: Does nothing if NULL or empty stack is passed
  * Return: nothing
  */
 void free_stack(stack_t **stack)
@@ -14,7 +13,8 @@ void free_stack(stack_t **stack)
 
 	if (stack == NULL)
 	{
-		return;
+		fprintf(stderr, "free_stack: Invalid address as stack\n");
+		exit(EXIT_FAILURE);
 	}
 
 	for (tracker = tmp = (*stack)->next; tmp != NULL; tmp = tmp->next)

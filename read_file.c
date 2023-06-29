@@ -21,7 +21,6 @@ FILE *read_file(UNUSED stack_t **stack, UNUSED FILE *fp_stream)
 	if (fp_stream == NULL)
 	{
 		fprintf(stderr, "Error: Invalid stream\n");
-		free_stack(stack);
 		exit(EXIT_FAILURE);
 	}
 
@@ -45,6 +44,5 @@ FILE *read_file(UNUSED stack_t **stack, UNUSED FILE *fp_stream)
 		}
 	}
 	free(cp_line);	/* clean up */
-	free_stack(stack);
 	return (fp_stream);
 }

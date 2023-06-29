@@ -18,7 +18,6 @@ void _sub(stack_t **stack, unsigned int line_number)
 	{
 		fprintf(stderr, "L%u: _sub: NULL passed as stack\n",
 			line_number);
-		free_stack(stack);
 		exit(EXIT_FAILURE);
 	}
 
@@ -27,7 +26,6 @@ void _sub(stack_t **stack, unsigned int line_number)
 	{
 		fprintf(stderr, "L%u: can't sub, stack too short\n",
 			line_number);
-		free_stack(stack);
 		exit(EXIT_FAILURE);
 	}
 	tmp = (*stack)->next;
