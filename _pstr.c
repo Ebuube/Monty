@@ -27,6 +27,7 @@ void _pstr(stack_t **stack, unsigned int line_number)
 	{
 		fprintf(stderr, "L%u: _pstr: NULL passed as stack\n",
 			line_number);
+		free_stack(stack);
 		exit(EXIT_FAILURE);
 	}
 

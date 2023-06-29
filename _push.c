@@ -19,6 +19,7 @@ void _push(stack_t **stack, unsigned int line_number)
 	if (bytecode.opcode_arg == INT_MIN)
 	{
 		fprintf(stderr, "L%u: usage: push integer\n", line_number);
+		free_stack(stack);
 		exit(EXIT_FAILURE);
 	}
 
@@ -26,6 +27,7 @@ void _push(stack_t **stack, unsigned int line_number)
 	if (new == NULL)
 	{/* Malloc failure */
 		fprintf(stderr, "Error: malloc failed\n");
+		free_stack(stack);
 		exit(EXIT_FAILURE);
 	}
 

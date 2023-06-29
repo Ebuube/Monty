@@ -17,6 +17,7 @@ void _pall(stack_t **stack, unsigned int line_number)
 	{
 		fprintf(stderr, "L%u: _pall: NULL passed as stack\n",
 			line_number);
+		free_stack(stack);
 		exit(EXIT_FAILURE);
 	}
 	if ((*stack) == NULL)
@@ -34,6 +35,7 @@ void _pall(stack_t **stack, unsigned int line_number)
 		{
 			fprintf(stderr, "L%u: _pall: loop in stack\n",
 				line_number);
+			free_stack(stack);
 			exit(EXIT_FAILURE);
 		}
 	}

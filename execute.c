@@ -28,6 +28,7 @@ int execute(stack_t **stack, unsigned int line_number)
 	{
 		fprintf(stderr, "L%u: unknown instruction %s\n",
 			line_number, bytecode.opcode);
+		free_stack(stack);
 		exit(EXIT_FAILURE);
 	}
 	else

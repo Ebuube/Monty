@@ -19,6 +19,7 @@ void _rotl(stack_t **stack, unsigned int line_number)
 	{
 		fprintf(stderr, "L%u: _rotl: NULL passed as stack\n",
 			line_number);
+		free_stack(stack);
 		exit(EXIT_FAILURE);
 	}
 
