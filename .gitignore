@@ -8,3 +8,6 @@ valgrind-out.txt
 
 # bytecode sample files
 bytecodes/
+
+# The executable
+monty
