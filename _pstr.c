@@ -32,7 +32,7 @@ void _pstr(stack_t **stack, unsigned int line_number)
 
 	for (tmp = (*stack); (tmp != NULL) && (tmp->n != 0); tmp = tmp->next)
 	{
-		if ((ascii_start <= (*stack)->n) && ((*stack)->n <= ascii_end))
+		if ((ascii_start < tmp->n) && (tmp->n <= ascii_end))
 			printf("%c", tmp->n);	/* print character */
 		else
 		{
