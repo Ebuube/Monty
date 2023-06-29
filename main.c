@@ -17,7 +17,6 @@ int main(UNUSED int argc, UNUSED char *argv[])
 	if (argc != 2)
 	{/* Ensure file name was passed on command line */
 		fprintf(stderr, "USAGE: monty file\n");
-		free_stack(&stack);
 		exit(EXIT_FAILURE);
 	}
 	cp_filename = argv[1];	/* set name of file to run */
@@ -26,7 +25,6 @@ int main(UNUSED int argc, UNUSED char *argv[])
 	if (fp_file == NULL)
 	{/* File doesn't exist */
 		fprintf(stderr, "Error: Can't open file %s\n", cp_filename);
-		free_stack(&stack);
 		exit(EXIT_FAILURE);
 	}
 
@@ -38,7 +36,6 @@ int main(UNUSED int argc, UNUSED char *argv[])
 	{
 		fprintf(stderr, "Error: Can't close the file %s in stream %p\n",
 				cp_filename, (void *)fp_file);
-		free_stack(&stack);
 		exit(EXIT_FAILURE);
 	}
 
